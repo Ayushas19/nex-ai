@@ -1,0 +1,138 @@
+* {
+    font-size: 1.3vw;
+    font-family: "Epilogue", sans-serif;
+}
+
+html {
+    --scrollbarBG: #232323;
+    --thumbBG: #ffe066;
+}
+
+body {
+    background: linear-gradient(120deg, #181818 0%, #232323 60%, #3a2d00 100%);
+    background-size: cover;
+    color: #ffe066;
+}
+
+body .card {
+    height: 45vw;
+    width: 35vw;
+    background-color: #232323;
+    margin-left: 30vw;
+    margin-top: 5vw;
+    box-shadow: 0 0 40px #292828;
+    border-radius: 20px;
+}
+
+body .card #header {
+    border-radius: 20px 20px 0 0;
+    height: 5vw;
+    background: #181818;
+    padding: 0vw;
+}
+
+body .card #header h1 {
+    color: #ffe066;
+    font-size: 2vw;
+    font-family: sans-serif;
+    padding: 1vw;
+}
+
+body .card #message-section::-webkit-scrollbar {
+    width: 10px;
+}
+body .card #message-section {
+    height: 32vw;
+    padding: 0 2.5vw;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    background: radial-gradient(328px at 2.9% 15%, #3a2d00 0%, #232323 60%, #181818 100%);
+}
+body .card #message-section::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+body .card #message-section::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+body .card #message-section #bot,
+body .card #message-section #user {
+    position: relative;
+    bottom: 0;
+    min-height: 1.5vw;
+    border: 0.15vw solid #ffe066;
+    background-color: #232323;
+    border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
+    padding: 1vw;
+    margin: 1.5vw 0;
+}
+body .card #message-section #user {
+    border: 1.5px solid #ffd60a;
+    border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
+    background-color: #181818;
+    float: right;
+}
+body .card #message-section #user #user-response {
+    color: #ffe066;
+}
+body .card #message-section .message {
+    color: #ffe066;
+    clear: both;
+    line-height: 1.2vw;
+    font-size: 1.2vw;
+    padding: 8px;
+    position: relative;
+    margin: 8px 0;
+    max-width: 85%;
+    word-wrap: break-word;
+    z-index: 2;
+}
+body .card #input-section {
+    z-index: 1;
+    padding: 0 2.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    overflow: hidden;
+    height: 6vw;
+    width: 100%;
+}
+body .card #input-section input {
+    color: #ffe066;
+    min-width: 0.5vw;
+    outline: none;
+    height: 5vw;
+    width: 26vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #ffd60a 0.1vw;
+    background: transparent;
+}
+body .card .send {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    flex: 0 0 auto;
+    margin-left: 1.4vw;
+    margin-right: 0vw;
+    padding: 0;
+    position: relative;
+    outline: none;
+}
+body .card .send .circle {
+    position: relative;
+    width: 4.8vw;
+    height: 4.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body .card .send .circle i {
+    font-size: 3vw;
+    margin-left: -1vw;
+    margin-top: 1vw;
+    color: #ffd60a;
+}
