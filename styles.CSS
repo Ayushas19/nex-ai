@@ -1,17 +1,40 @@
+:root {
+    --primary: #66e6ff;
+    --secondary: #29c7ee;
+    --accent: #e6f7ff;
+    --glass-bg: rgba(102, 230, 255, 0.13);
+    --glass-border: rgba(102, 230, 255, 0.22);
+    --shadow: 0 8px 32px 0 rgba(41, 199, 238, 0.25);
+    --gradient: linear-gradient(120deg, #181818 0%, #232323 60%, #001122 100%);
+    --text-dark: #66e6ff;
+    --text-light: #e6f7ff;
+    --scrollbarBG: #232323;
+    --thumbBG: #29c7ee;
+}
+
 * {
     font-size: 1.3vw;
     font-family: "Epilogue", sans-serif;
 }
 
-html {
-    --scrollbarBG: #232323;
-    --thumbBG: #ffe066;
+body {
+    background: linear-gradient(120deg, #181818 0%, #232323 60%, #001122 100%);
+    background-size: cover;
+    color: #66e6ff;
+    position: relative;
 }
 
-body {
-    background: linear-gradient(120deg, #181818 0%, #232323 60%, #3a2d00 100%);
-    background-size: cover;
-    color: #ffe066;
+body::before {
+    content: "nexora";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10vw;
+    color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+    filter: blur(5px);
+    pointer-events: none;
 }
 
 body .card {
@@ -32,7 +55,7 @@ body .card #header {
 }
 
 body .card #header h1 {
-    color: #ffe066;
+    color: #1abfe8;
     font-size: 2vw;
     font-family: sans-serif;
     padding: 1vw;
@@ -62,23 +85,23 @@ body .card #message-section #user {
     position: relative;
     bottom: 0;
     min-height: 1.5vw;
-    border: 0.15vw solid #ffe066;
+    border: 0.15vw solid #3ad5e9;
     background-color: #232323;
     border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
     padding: 1vw;
     margin: 1.5vw 0;
 }
 body .card #message-section #user {
-    border: 1.5px solid #ffd60a;
+    border: 1.5px solid #46aef3;
     border-radius: 1.5vw 1.5vw 1.5vw 1.5vw;
     background-color: #181818;
     float: right;
 }
 body .card #message-section #user #user-response {
-    color: #ffe066;
+    color: #4baffc;
 }
 body .card #message-section .message {
-    color: #ffe066;
+    color: #26a6e2;
     clear: both;
     line-height: 1.2vw;
     font-size: 1.2vw;
@@ -100,7 +123,7 @@ body .card #input-section {
     width: 100%;
 }
 body .card #input-section input {
-    color: #ffe066;
+    color: #66c7ff;
     min-width: 0.5vw;
     outline: none;
     height: 5vw;
@@ -108,7 +131,7 @@ body .card #input-section input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: solid #ffd60a 0.1vw;
+    border-bottom: solid #0aefff 0.1vw;
     background: transparent;
 }
 body .card .send {
@@ -134,5 +157,5 @@ body .card .send .circle i {
     font-size: 3vw;
     margin-left: -1vw;
     margin-top: 1vw;
-    color: #ffd60a;
+    color: #1ed9f6;
 }
